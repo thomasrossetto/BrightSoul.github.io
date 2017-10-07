@@ -175,11 +175,7 @@ function AgendaViewModel() {
 				continue;
 			}
 			currentSession = self.config.sessions[i];	
-			if (i > 0 && ((now - self.config.sessions[i-1].when - (self.config.sessions[i-1].durationInMinutes * 60 * 1000)) <= (self.config.isRecentForMinutes * 60 * 1000))) {
-				pastSession = self.config.sessions[i-1];
-			} else {
-				pastSession = null;
-			}
+			pastSession = self.config.sessions[i-1];
 			
 			if (i < self.config.sessions.length -1) {
 				upcomingSessions = [];
